@@ -1,0 +1,9 @@
+<%= simple_form_for [@list] do |f| %>
+  <%= f.input :name %>
+  <%= f.submit "Modify the name of your list", class: "btn btn-primary" %>
+<% end %>
+
+<%= link_to "Delete your list",
+  list_path(@list.id),
+  data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}
+%>
