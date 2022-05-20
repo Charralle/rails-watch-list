@@ -5,5 +5,6 @@ Rails.application.routes.draw do
     resources :bookmarks, only: [:new, :index, :create, :update]
   end
   # Defines the root path route ("/")
+  root to: "lists#index"
   # root "articles#index"
 end
